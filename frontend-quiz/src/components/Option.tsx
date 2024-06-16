@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { INIT_TIME, correctAtom, questionNumberAtom, quizAtom, scoreAtom, timerAtom, wrongAtom } from "../store/atom";
 import { useEffect, useRef, useState } from "react";
 
@@ -11,16 +11,16 @@ export default function Option() {
     const questionNumber = useRecoilValue(questionNumberAtom);
     const timer = useRecoilValue(timerAtom);
     const data = useRecoilValue(quizAtom);
-    const [score, setScore] = useRecoilState(scoreAtom);
+    const setScore = useRecoilValue(scoreAtom);
     const setWrong = useSetRecoilState(wrongAtom);
     const setCorrect = useSetRecoilState(correctAtom);
 
     const [chosen, setChosen] = useState("");
 
-    const option1Ref = useRef();
-    const option2Ref = useRef();
-    const option3Ref = useRef();
-    const option4Ref = useRef();
+    const option1Ref = useRef<string>("");
+    const option2Ref = useRef<string>("");
+    const option3Ref = useRef<string>("");
+    const option4Ref = useRef<string>("");
 
     useEffect(() => {
         if (timer == 4) {
