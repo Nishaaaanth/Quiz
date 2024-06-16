@@ -118,10 +118,10 @@ export default function Option() {
 
     return (
         <div className="m-6 flex flex-col justify-center items-center gap-2">
-            <button ref={option1Ref} onClick={() => setChosen(data.quiz[questionNumber].option1)} className={unClicked}>{data.quiz[questionNumber].option1}</button>
-            <button ref={option2Ref} onClick={() => setChosen(data.quiz[questionNumber].option2)} className={unClicked}>{data.quiz[questionNumber].option2}</button>
-            <button ref={option3Ref} onClick={() => setChosen(data.quiz[questionNumber].option3)} className={unClicked}>{data.quiz[questionNumber].option3}</button>
-            <button ref={option4Ref} onClick={() => setChosen(data.quiz[questionNumber].option4)} className={unClicked}>{data.quiz[questionNumber].option4}</button>
+            <div ref={option1Ref} onClick={() => setChosen(data.quiz[questionNumber].option1)} className={unClicked}>{data.quiz[questionNumber].option1}</div>
+            <div ref={option2Ref} onClick={() => setChosen(data.quiz[questionNumber].option2)} className={unClicked}>{data.quiz[questionNumber].option2}</div>
+            <div ref={option3Ref} onClick={() => setChosen(data.quiz[questionNumber].option3)} className={unClicked}>{data.quiz[questionNumber].option3}</div>
+            <div ref={option4Ref} onClick={() => setChosen(data.quiz[questionNumber].option4)} className={unClicked}>{data.quiz[questionNumber].option4}</div>
         </div>
     );
 }
