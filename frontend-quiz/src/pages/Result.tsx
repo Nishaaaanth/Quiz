@@ -2,7 +2,7 @@ import { useRecoilValue } from "recoil";
 import { scoreAtom } from "../store/atom";
 
 export default function Result() {
-    const score = useRecoilValue(scoreAtom);
+    const score: number = useRecoilValue(scoreAtom);
 
     let comment: string = "";
 

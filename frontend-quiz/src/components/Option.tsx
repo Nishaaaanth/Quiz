@@ -29,52 +29,53 @@ export default function Option() {
                 setCorrect(true);
                 setWrong(false);
 
-                if (chosen == data.quiz[questionNumber].option1) {
-                    option1Ref.current.className = correct;
-                    option2Ref.current.className = unClicked;
-                    option3Ref.current.className = unClicked;
-                    option4Ref.current.className = unClicked;
-                } else if (chosen == data.quiz[questionNumber].option2) {
-                    option2Ref.current.className = correct;
-                    option1Ref.current.className = unClicked;
-                    option3Ref.current.className = unClicked;
-                    option4Ref.current.className = unClicked;
-                } else if (chosen == data.quiz[questionNumber].option3) {
-                    option3Ref.current.className = correct;
-                    option1Ref.current.className = unClicked;
-                    option2Ref.current.className = unClicked;
-                    option4Ref.current.className = unClicked;
-                } else if (chosen == data.quiz[questionNumber].option4) {
-                    option4Ref.current.className = correct;
-                    option1Ref.current.className = unClicked;
-                    option2Ref.current.className = unClicked;
-                    option3Ref.current.className = unClicked;
-                }
+                    (option1Ref.current as {className: string}).className = correct;
+                // if (chosen == data.quiz[questionNumber].option1) {
+                //     option1Ref.current.className = correct;
+                //     option2Ref.current.className = unClicked;
+                //     option3Ref.current.className = unClicked;
+                //     option4Ref.current.className = unClicked;
+                // } else if (chosen == data.quiz[questionNumber].option2) {
+                //     option2Ref.current.className = correct;
+                //     option1Ref.current.className = unClicked;
+                //     option3Ref.current.className = unClicked;
+                //     option4Ref.current.className = unClicked;
+                // } else if (chosen == data.quiz[questionNumber].option3) {
+                //     option3Ref.current.className = correct;
+                //     option1Ref.current.className = unClicked;
+                //     option2Ref.current.className = unClicked;
+                //     option4Ref.current.className = unClicked;
+                // } else if (chosen == data.quiz[questionNumber].option4) {
+                //     option4Ref.current.className = correct;
+                //     option1Ref.current.className = unClicked;
+                //     option2Ref.current.className = unClicked;
+                //     option3Ref.current.className = unClicked;
+                // }
             } else if(data.quiz[questionNumber].answer != chosen){
                 setWrong(true);
                 setCorrect(false);
 
-                if (chosen == data.quiz[questionNumber].option1) {
-                    option1Ref.current.className = wrong;
-                    option2Ref.current.className = unClicked;
-                    option3Ref.current.className = unClicked;
-                    option4Ref.current.className = unClicked;
-                } else if (chosen == data.quiz[questionNumber].option2) {
-                    option2Ref.current.className = wrong;
-                    option1Ref.current.className = unClicked;
-                    option3Ref.current.className = unClicked;
-                    option4Ref.current.className = unClicked;
-                } else if (chosen == data.quiz[questionNumber].option3) {
-                    option3Ref.current.className = wrong;
-                    option1Ref.current.className = unClicked;
-                    option2Ref.current.className = unClicked;
-                    option4Ref.current.className = unClicked;
-                } else if (chosen == data.quiz[questionNumber].option4) {
-                    option4Ref.current.className = wrong;
-                    option1Ref.current.className = unClicked;
-                    option2Ref.current.className = unClicked;
-                    option3Ref.current.className = unClicked;
-                }
+                // if (chosen == data.quiz[questionNumber].option1) {
+                //     option1Ref.current.className = wrong;
+                //     option2Ref.current.className = unClicked;
+                //     option3Ref.current.className = unClicked;
+                //     option4Ref.current.className = unClicked;
+                // } else if (chosen == data.quiz[questionNumber].option2) {
+                //     option2Ref.current.className = wrong;
+                //     option1Ref.current.className = unClicked;
+                //     option3Ref.current.className = unClicked;
+                //     option4Ref.current.className = unClicked;
+                // } else if (chosen == data.quiz[questionNumber].option3) {
+                //     option3Ref.current.className = wrong;
+                //     option1Ref.current.className = unClicked;
+                //     option2Ref.current.className = unClicked;
+                //     option4Ref.current.className = unClicked;
+                // } else if (chosen == data.quiz[questionNumber].option4) {
+                //     option4Ref.current.className = wrong;
+                //     option1Ref.current.className = unClicked;
+                //     option2Ref.current.className = unClicked;
+                //     option3Ref.current.className = unClicked;
+                // }
             }
         }
 
@@ -83,36 +84,36 @@ export default function Option() {
             setCorrect(false);
             setWrong(false);
 
-            option1Ref.current.className = unClicked;
-            option2Ref.current.className = unClicked;
-            option3Ref.current.className = unClicked;
-            option4Ref.current.className = unClicked;
+            // option1Ref.current.className = unClicked;
+            // option2Ref.current.className = unClicked;
+            // option3Ref.current.className = unClicked;
+            // option4Ref.current.className = unClicked;
         }
     }, [timer]);
 
     useEffect(() => {
         if (timer > 4) {
-            if (chosen == data.quiz[questionNumber].option1) {
-                option1Ref.current.className = selected;
-                option2Ref.current.className = unClicked;
-                option3Ref.current.className = unClicked;
-                option4Ref.current.className = unClicked;
-            } else if (chosen == data.quiz[questionNumber].option2) {
-                option2Ref.current.className = selected;
-                option1Ref.current.className = unClicked;
-                option3Ref.current.className = unClicked;
-                option4Ref.current.className = unClicked;
-            } else if (chosen == data.quiz[questionNumber].option3) {
-                option3Ref.current.className = selected;
-                option1Ref.current.className = unClicked;
-                option2Ref.current.className = unClicked;
-                option4Ref.current.className = unClicked;
-            } else if (chosen == data.quiz[questionNumber].option4) {
-                option4Ref.current.className = selected;
-                option1Ref.current.className = unClicked;
-                option2Ref.current.className = unClicked;
-                option3Ref.current.className = unClicked;
-            }
+            // if (chosen == data.quiz[questionNumber].option1) {
+            //     option1Ref.current.className = selected;
+            //     option2Ref.current.className = unClicked;
+            //     option3Ref.current.className = unClicked;
+            //     option4Ref.current.className = unClicked;
+            // } else if (chosen == data.quiz[questionNumber].option2) {
+            //     option2Ref.current.className = selected;
+            //     option1Ref.current.className = unClicked;
+            //     option3Ref.current.className = unClicked;
+            //     option4Ref.current.className = unClicked;
+            // } else if (chosen == data.quiz[questionNumber].option3) {
+            //     option3Ref.current.className = selected;
+            //     option1Ref.current.className = unClicked;
+            //     option2Ref.current.className = unClicked;
+            //     option4Ref.current.className = unClicked;
+            // } else if (chosen == data.quiz[questionNumber].option4) {
+            //     option4Ref.current.className = selected;
+            //     option1Ref.current.className = unClicked;
+            //     option2Ref.current.className = unClicked;
+            //     option3Ref.current.className = unClicked;
+            // }
         }
     }, [chosen]);
 
